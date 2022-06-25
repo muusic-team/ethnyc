@@ -19,7 +19,7 @@ async function main() {
   );
   const conduitController = await ConduitController.deploy();
   await conduitController.deployed();
-  console.log("Seaport deployed to:", conduitController.address);
+  console.log("ConduitController deployed to:", conduitController.address);
 
   fs.writeFileSync(
     "./config.js",
