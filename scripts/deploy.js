@@ -7,26 +7,12 @@ async function main() {
   await nftMarketplace.deployed();
   console.log("nftMarketplace deployed to:", nftMarketplace.address);
 
-  fs.writeFileSync(
-    "./config.js",
-    `
-  export const marketplaceAddress = "${nftMarketplace.address}"
-  `
-  );
-
   const ConduitController = await hre.ethers.getContractFactory(
     "ConduitController"
   );
   const conduitController = await ConduitController.deploy();
   await conduitController.deployed();
-  console.log("Seaport deployed to:", conduitController.address);
-
-  fs.writeFileSync(
-    "./config.js",
-    `
-  export const conduitController = "${conduitController.address}"
-  `
-  );
+  console.log("ConduitController deployed to:", conduitController.address);
 
   const Seaport = await hre.ethers.getContractFactory("Seaport");
   const seaport = await Seaport.deploy(conduitController.address);
@@ -36,6 +22,8 @@ async function main() {
   fs.writeFileSync(
     "./config.js",
     `
+  export const marketplaceAddress = "${nftMarketplace.address}"
+  export const conduitController = "${conduitController.address}"
   export const seaportAddress = "${seaport.address}"
   `
   );
