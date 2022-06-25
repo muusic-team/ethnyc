@@ -14,8 +14,22 @@ async function main() {
   `
   );
 
+  const ConduitController = await hre.ethers.getContractFactory(
+    "ConduitController"
+  );
+  const conduitController = await ConduitController.deploy();
+  await conduitController.deployed();
+  console.log("Seaport deployed to:", conduitController.address);
+
+  fs.writeFileSync(
+    "./config.js",
+    `
+  export const conduitController = "${conduitController.address}"
+  `
+  );
+
   const Seaport = await hre.ethers.getContractFactory("Seaport");
-  const seaport = await Seaport.deploy();
+  const seaport = await Seaport.deploy(conduitController.address);
   await seaport.deployed();
   console.log("Seaport deployed to:", seaport.address);
 
