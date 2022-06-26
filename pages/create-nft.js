@@ -77,7 +77,6 @@ export default function CreateItem() {
     await transaction.wait();
     let tokenId = await contract.getCurrentTokenId();
     const seaport = new Seaport(provider);
-    const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
     const offerItem = [
       {
@@ -98,10 +97,10 @@ export default function CreateItem() {
     const restrictedByZone = 0;
     const fees = 0;
 
-    let order = await seaport.createOrder(
-      { offer: offerItem, consideration: considerationItem },
-      address
-    );
+    let order = await seaport.createOrder({
+      offer: offerItem,
+      consideration: considerationItem,
+    });
     await order.wait();
 
     router.push("/");
