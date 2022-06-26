@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import Web3Modal from "web3modal";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import env from "hardhat";
 
 let providerOptions;
 
@@ -11,8 +13,13 @@ let web3Modal;
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    providerOptions = {
-      /* See Provider Options Section */
+    const providerOptions = {
+      walletconnect: {
+        package: WalletConnectProvider, // required
+        options: {
+          infuraId: process.env.NEXT_PUBLIC_INFURA_ID, // required
+        },
+      },
     };
 
     web3Modal = new Web3Modal({
@@ -33,6 +40,7 @@ function MyApp({ Component, pageProps }) {
   const [verified, setVerified] = useState();
 
   const connectWallet = async () => {
+    console.log("connect wallet clicked");
     try {
       const provider = await web3Modal.connect();
       const library = new ethers.providers.Web3Provider(provider);
@@ -45,6 +53,8 @@ function MyApp({ Component, pageProps }) {
     } catch (error) {
       setError(error);
     }
+
+    console.log(account);
   };
 
   const handleNetwork = (e) => {
@@ -158,7 +168,25 @@ function MyApp({ Component, pageProps }) {
     <div>
       <nav className="border-b p-6">
         <p className="text-4xl font-bold">Metaverse Marketplace</p>
-        <div className=""></div>
+        <div className="">
+          <button
+            className="border-2 bg-green-300 border-green-500 hover:drop-shadow-md"
+            onClick={() => {
+              connectWallet();
+            }}
+          >
+            Connect
+          </button>
+          <button
+            className="border-2 bg-red-300 border-red-500 hover:drop-shadow-md"
+            onClick={() => {
+              disconnect();
+            }}
+          >
+            Disconnect
+          </button>
+          {account == null ? "Not connected yet!" : account}
+        </div>
         <div className="flex mt-4">
           <Link href="/">
             <a className="mr-4 text-pink-500">Home</a>
@@ -172,7 +200,12 @@ function MyApp({ Component, pageProps }) {
           <Link href="/dashboard">
             <a className="mr-6 text-pink-500">Dashboard</a>
           </Link>
-          <Link href="/subscribe">
+          <Link
+            chainId={chainId}
+            provider={provider}
+            network={network}
+            href="/subscribe"
+          >
             <a className="mr-6 text-pink-500">Subscribe</a>
           </Link>
         </div>
