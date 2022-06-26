@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "npx hardhat run scripts/deploy.js"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
@@ -15,6 +16,7 @@
     "@openzeppelin/contracts": "^4.6.0",
     "@rari-capital/solmate": "^6.4.0",
     "@superfluid-finance/sdk-core": "^0.4.2",
+    "@walletconnect/web3-provider": "^1.7.8",
     "axios": "^0.27.2",
     "chai": "^4.3.6",
     "ethereum-waffle": "^3.4.4",
