@@ -2,15 +2,19 @@
 require("@nomiclabs/hardhat-waffle");
 
 module.exports = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: "optimistic-kovan",
   networks: {
+    "optimistic-kovan": {
+      url: "https://kovan.optimism.io",
+      accounts: [process.env.PUBLIC_NEXT_OPTIKEY],
+    },
     hardhat: {
       chainId: 1337,
     },
-    // mumbai: {
-    //   url: "https://rpc-mumbai.maticvigil.com",
-    //   accounts: [process.env.privateKey]
-    // }
+    mumbai: {
+      url: "https://rpc-mumbai.maticvigil.com",
+      accounts: [process.env.privateKey],
+    },
   },
   solidity: {
     compilers: [
