@@ -42,3 +42,6 @@ cache
 artifacts
 
 .idea
+
+#Environemnt
+.env
