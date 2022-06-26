@@ -1,0 +1,88 @@
+[33mcommit 4a71d2bd1016ad5a7caec40c9b0be270dda9d700[m[33m ([m[1;36mHEAD -> [m[1;32mdaniel/superapp[m[33m, [m[1;31morigin/daniel/superapp[m[33m)[m
+Merge: beda0a9 3f0c671
+Author: Daniel Gushchyan <d.gushchyan@gmail.com>
+Date:   Sun Jun 26 01:06:10 2022 -0400
+
+    walletconnect -> superapp merge
+
+[33mcommit beda0a9948bf1b108c85d8faeb4fae690e01344e[m
+Author: Daniel Gushchyan <d.gushchyan@gmail.com>
+Date:   Sun Jun 26 00:19:19 2022 -0400
+
+    Started superapp development
+
+[33mcommit 3f0c671848c04d1e3b086635a22d3ae43a9217c0[m[33m ([m[1;32mdaniel/walletconnect[m[33m)[m
+Merge: 1d3cd04 8b6e19d
+Author: Daniel Gushchyan <d.gushchyan@gmail.com>
+Date:   Sat Jun 25 15:53:42 2022 -0400
+
+    merge conflict fixed
+
+[33mcommit 1d3cd04aa9f5c9bb93e5aa6f467b150bbf4e29e8[m
+Author: Daniel Gushchyan <d.gushchyan@gmail.com>
+Date:   Sat Jun 25 15:47:17 2022 -0400
+
+    Starting imtegration of walletconnect
+
+[33mcommit 8b6e19ddb4dda4adb0633c12803d57341ebdbcf0[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/daniel/optimism[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mdaniel/optimism[m[33m)[m
+Author: moAlobaidi <mohammed.alobaidi.2002@gmail.com>
+Date:   Sat Jun 25 13:53:17 2022 -0400
+
+    fix deploy script
+
+[33mcommit 5f390b62b1c9d1011c05f29b46f81ede7ec45c2a[m
+Author: moAlobaidi <mohammed.alobaidi.2002@gmail.com>
+Date:   Sat Jun 25 13:43:36 2022 -0400
+
+    ur mom is a hoe
+
+[33mcommit 3906e371acf090de54922e07203c03c171a7db4c[m
+Merge: 5535c59 564c895
+Author: Mohammed Alobaidi <37510951+moAlobaidi@users.noreply.github.com>
+Date:   Sat Jun 25 13:34:53 2022 -0400
+
+    Merge pull request #1 from muusic-team/mo/setup-seaport
+    
+    Mo/setup seaport
+
+[33mcommit 564c8955a3bab1558a2223b0705554d1e066a3b8[m[33m ([m[1;31morigin/mo/setup-seaport[m[33m)[m
+Author: moAlobaidi <mohammed.alobaidi.2002@gmail.com>
+Date:   Sat Jun 25 13:29:38 2022 -0400
+
+    your mother is a nice lady
+
+[33mcommit 5af0886bf7a688dc7c1dff31b54e06b2f7fa4bdd[m
+Author: moAlobaidi <mohammed.alobaidi.2002@gmail.com>
+Date:   Sat Jun 25 13:17:00 2022 -0400
+
+    seaport import lkjasdfh
+
+[33mcommit fb8924aa60d477d26f561683b39a911b0d42e4b5[m
+Author: moAlobaidi <mohammed.alobaidi.2002@gmail.com>
+Date:   Sat Jun 25 12:10:05 2022 -0400
+
+    download seaport contracts and update deplot
+
+[33mcommit 5535c59e3bf9d79c063f1e2adf3e46386864ba01[m
+Author: moAlobaidi <mohammed.alobaidi.2002@gmail.com>
+Date:   Sat Jun 25 10:16:29 2022 -0400
+
+    prettier shtuf
+
+[33mcommit f1d930d6aee0df747faf94e060ead8b46521b68a[m
+Author: moAlobaidi <mohammed.alobaidi.2002@gmail.com>
+Date:   Sat Jun 25 10:13:49 2022 -0400
+
+    barebones marketplace functionality
+
+[33mcommit 74546016ece851c50851d63f9fd1ff118fb3bcd0[m
+Author: moAlobaidi <mohammed.alobaidi.2002@gmail.com>
+Date:   Sat Jun 25 09:31:12 2022 -0400
+
+    project setup habebi
+
+[33mcommit eb67ee7af13de336bf019d356d870545152977ec[m
+Author: moAlobaidi <mohammed.alobaidi.2002@gmail.com>
+Date:   Sat Jun 25 09:16:18 2022 -0400
+
+    first commit
