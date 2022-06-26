@@ -14,6 +14,7 @@
     "@nomiclabs/hardhat-waffle": "^2.0.3",
     "@openzeppelin/contracts": "^4.6.0",
     "@rari-capital/solmate": "^6.4.0",
+    "@superfluid-finance/sdk-core": "^0.4.2",
     "axios": "^0.27.2",
     "chai": "^4.3.6",
     "ethereum-waffle": "^3.4.4",
