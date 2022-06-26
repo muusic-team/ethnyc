@@ -1,3 +1,3 @@
-export const marketplaceAddress = "0x0165878A594ca255338adfa4d48449f69242Eb8F";
-export const conduitController = "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853";
-export const seaportAddress = "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6";
+export const marketplaceAddress = "0x0E4203a9C9023860460a2b9B3Ad2209E13BbfE97";
+export const conduitController = "0x3EF7253c390085015F612D334B24159BC26065A1";
+export const seaportAddress = "0x2cd08473b3a523e2CB4FA6FA4E645bD59daa67E1";
